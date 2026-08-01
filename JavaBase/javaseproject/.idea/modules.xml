@@ -1,0 +1,15 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<project version="4">
+  <component name="ProjectModuleManager">
+    <modules>
+      <module fileurl="file://$PROJECT_DIR$/day01-helloworld-app/day01-helloworld-app.iml" filepath="$PROJECT_DIR$/day01-helloworld-app/day01-helloworld-app.iml" />
+      <module fileurl="file://$PROJECT_DIR$/day02-basic-app/day02-basic-app.iml" filepath="$PROJECT_DIR$/day02-basic-app/day02-basic-app.iml" />
+      <module fileurl="file://$PROJECT_DIR$/day04-arrays/day04-arrays.iml" filepath="$PROJECT_DIR$/day04-arrays/day04-arrays.iml" />
+      <module fileurl="file://$PROJECT_DIR$/day05-oop/day05-oop.iml" filepath="$PROJECT_DIR$/day05-oop/day05-oop.iml" />
+      <module fileurl="file://$PROJECT_DIR$/day06-oop/day06-oop.iml" filepath="$PROJECT_DIR$/day06-oop/day06-oop.iml" />
+      <module fileurl="file://$PROJECT_DIR$/day07-oop/day07-oop.iml" filepath="$PROJECT_DIR$/day07-oop/day07-oop.iml" />
+      <module fileurl="file://$PROJECT_DIR$/day08-oop/day08-oop.iml" filepath="$PROJECT_DIR$/day08-oop/day08-oop.iml" />
+      <module fileurl="file://$PROJECT_DIR$/javaseproject.iml" filepath="$PROJECT_DIR$/javaseproject.iml" />
+    </modules>
+  </component>
+</project>
