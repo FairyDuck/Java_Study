@@ -1,9 +1,9 @@
 # JavaSE
 | 日期 | JavaSE课程 | 刷题 | 八股 |
 | --- | --- | --- | --- |
-| 7/31 | javase-day07 | 3道 | --- |
-| 8/1 | javase-day08-120 | --- | --- |
-
+| 7/31 | javase-day07 | 3道 |  |
+| 8/1 | javase-day08-120 | 7道 |  |
+---
 
 # Java 集合框架常用方法速查表
 ## 一、List（`ArrayList` / `LinkedList`）
