@@ -2,4 +2,5 @@
 | --- | --- | --- | --- |
 | 7/31 | javase-day07 | 3道 |  |
 | 8/1 | javase-day08 | 7道 |  |
-| 8/2 | javase-day09 | 10道 |  |
+| 8/2 | javase-day01 | 10道 |  |
+| 8/3 | javase-day02 | 4道 |  |
