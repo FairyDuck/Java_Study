@@ -5,4 +5,4 @@
 | 8/2 | javase-day01 | 10道 |  |
 | 8/3 | javase-day02 | 4道 |  |
 | 8/4 |  | 4道 |  |
-| 8/3 | javase-day | 9道 |  |
+| 8/5 | javase-day03 | 10道 |  |
