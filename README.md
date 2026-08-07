@@ -6,4 +6,5 @@
 | 8/3 | javase-day02 | 4道 |  |
 | 8/4 |  | 4道 |  |
 | 8/5 | javase-day03 | 10道 |  |
-| 8/6 | javase-day04-day05 | 道 |  |
+| 8/6 | javase-day04-day05 | 12道 |  |
+| 8/ | javase-day06, javase结束 | 5道 |  |
