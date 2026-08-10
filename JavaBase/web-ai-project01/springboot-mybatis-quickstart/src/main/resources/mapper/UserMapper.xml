@@ -1,0 +1,13 @@
+<?xml version="1.0" encoding="UTF-8" ?>
+<!DOCTYPE mapper
+        PUBLIC "-//mybatis.org//DTD Mapper 3.0//EN"
+        "http://mybatis.org/dtd/mybatis-3-mapper.dtd">
+
+<!--XML文件名与Mapper接口文件名一致，且需要放在同一个包下，但XML放在resources下-->
+<!--XML的namespace与Mapper接口的全限定名一致-->
+<!--XML的select标签的id与Mapper接口中的方法名一致，resultType与Mapper接口中方法的一条返回类型一致-->
+<mapper namespace="com.study.mapper.UserMapper">
+    <select id="findAll" resultType="com.study.pojo.User">
+        select * from user
+    </select>
+</mapper>

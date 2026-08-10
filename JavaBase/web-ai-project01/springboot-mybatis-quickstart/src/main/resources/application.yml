@@ -1,0 +1,19 @@
+spring:
+  application:
+    name: springboot-mybatis-quickstart
+  # 配置数据库连接信息
+  datasource:
+    url: jdbc:mysql://localhost:3306/web01
+    driver-class-name: com.mysql.cj.jdbc.Driver
+    username: root
+    password: 123456
+  # 配置alibaba-Druid数据连接池
+    type: com.alibaba.druid.pool.DruidDataSource
+
+  # mybatis配置
+  # 输出日志到控制台
+mybatis:
+  configuration:
+    log-impl: org.apache.ibatis.logging.stdout.StdOutImpl
+  # 修改XML文件放置位置
+  mapper-locations: classpath:mapper/*.xml
