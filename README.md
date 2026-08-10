@@ -8,3 +8,5 @@
 | 8/5 | javase-day03 | 10道 |  |
 | 8/6 | javase-day04-day05 | 12道 |  |
 | 8/7 | javase-day06, javase结束 | 5道 |  |
+| 8/8 | javaweb-maven-web, 环境配置 | 1道 |  |
+| 8/9 | javase-mysql | 1道 |  |
