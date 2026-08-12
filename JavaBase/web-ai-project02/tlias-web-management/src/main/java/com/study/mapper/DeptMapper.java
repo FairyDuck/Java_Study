@@ -5,6 +5,7 @@ import org.apache.ibatis.annotations.*;
 
 import java.util.List;
 
+// 部门信息
 @Mapper
 public interface DeptMapper {
     // 查询所有部门
