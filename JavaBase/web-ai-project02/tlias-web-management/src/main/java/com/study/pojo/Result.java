@@ -21,9 +21,9 @@ public class Result {
 
     public static Result success(Object object) {
         Result result = new Result();
-        result.data = object;
         result.code = 1;
         result.msg = "success";
+        result.data = object;
         return result;
     }
 

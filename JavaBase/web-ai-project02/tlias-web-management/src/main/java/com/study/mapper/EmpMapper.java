@@ -2,11 +2,10 @@ package com.study.mapper;
 
 import com.study.pojo.Emp;
 import com.study.pojo.EmpQueryParam;
-import org.apache.ibatis.annotations.Insert;
-import org.apache.ibatis.annotations.Mapper;
-import org.apache.ibatis.annotations.Options;
+import org.apache.ibatis.annotations.*;
 
 import java.util.List;
+import java.util.Map;
 
 // 员工信息
 @Mapper
@@ -33,4 +32,25 @@ public interface EmpMapper {
     @Insert("insert into emp(username, name, gender, phone, job, salary, image, entry_date, dept_id, create_time, update_time) " +
             "values (#{username},#{name},#{gender},#{phone},#{job},#{salary},#{image},#{entryDate},#{deptId},#{createTime},#{updateTime})")
     void insert(Emp emp);
+
+    // 批量删除员工
+    void deleteByIds(List<Integer> ids);
+
+    // 根据ID查询员工
+    Emp getById(Integer id);
+
+    // 更新员工
+    void updateById(Emp emp);
+
+    // 统计各个职位的员工人数
+    @MapKey("pos")
+    List<Map<String, Object>> countEmpJobData();
+
+    // 统计员工性别信息
+    @MapKey("name")
+    List<Map> countEmpGenderData();
+
+    // 根据用户名和密码查询员工
+    @Select("select * from emp where username = #{username} and password = #{password}")
+    Emp getUsernameAndPassword(Emp emp);
 }
