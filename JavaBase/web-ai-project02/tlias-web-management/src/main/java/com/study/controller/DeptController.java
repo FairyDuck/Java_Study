@@ -1,5 +1,6 @@
 package com.study.controller;
 
+import com.study.anno.Log;
 import com.study.pojo.Dept;
 import com.study.pojo.Result;
 import com.study.service.DeptService;
@@ -27,6 +28,7 @@ public class DeptController {
     }
 
     // 根据id删除部门
+    @Log
     @DeleteMapping
     public Result delete(Integer id) {
         log.info("根据id删除部门, id: {}", id);
@@ -35,12 +37,14 @@ public class DeptController {
     }
 
     // 新增部门
+    @Log
     @PostMapping
     public Result save(@RequestBody Dept dept) {
         log.info("新增部门, dept: {}", dept);
         deptService.save(dept);
         return Result.success();
     }
+
 
     // 根据id查询部门
     @GetMapping("/{id}")
@@ -51,6 +55,7 @@ public class DeptController {
     }
 
     // 修改部门
+    @Log
     @PutMapping
     public Result update(@RequestBody Dept dept) {
         log.info("修改部门, dept: {}", dept);
