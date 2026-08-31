@@ -11,9 +11,11 @@ import io.swagger.annotations.Api;
 import io.swagger.annotations.ApiOperation;
 import lombok.extern.slf4j.Slf4j;
 import org.springframework.beans.factory.annotation.Autowired;
+import org.springframework.data.redis.core.RedisTemplate;
 import org.springframework.web.bind.annotation.*;
 
 import java.util.List;
+import java.util.Set;
 
 /**
  * 菜品管理
@@ -26,6 +28,8 @@ public class DishController {
 
     @Autowired
     private DishService dishService;
+    @Autowired
+    private RedisTemplate redisTemplate;
 
     /**
      * 新增菜品
@@ -89,6 +93,8 @@ public class DishController {
     public Result update(@RequestBody DishDTO dishDTO) {
         log.info("修改菜品：{}", dishDTO);
         dishService.updateWithFlavor(dishDTO);
+        //修改完菜品后需要刷新redis缓存，修改操作可能修改菜品分类，如果需要再判断是否修改了分类则还需要查询数据库，不如直接删除所有redis缓存
+        cleanCache("dish_*");
         return Result.success();
     }
 
@@ -102,6 +108,8 @@ public class DishController {
     public Result startOrStop(@PathVariable Integer status, Long id) {
         log.info("启动或停止菜品：{}", id);
         dishService.startOrStop(status, id);
+        //启动或停止菜品后需要刷新redis缓存
+        cleanCache("dish_*");
         return Result.success();
     }
 
@@ -118,4 +126,12 @@ public class DishController {
         return Result.success(dishList);
     }
 
+    /**
+     * 清理缓存
+     * @param key
+     */
+    private void cleanCache(String key) {
+        Set keys = redisTemplate.keys(key);
+        redisTemplate.delete(keys);
+    }
 }
